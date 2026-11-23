@@ -1,0 +1,179 @@
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8D0D0;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* CONTAINER */
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* HEADER PROFILE */
+.profile-header {
+    background-color: #454343;
+    padding: 30px 35px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+/* LINK KEMBALI */
+.profile-header a {
+    display: inline-block;
+    text-decoration: none;
+    color: #E8D0D0;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.profile-header a:hover {
+    color: white;
+}
+
+/* JUDUL */
+.profile-header h1 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* DESKRIPSI */
+.profile-header p {
+    color: #E8D0D0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    max-width: 650px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* AVATAR */
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+
+    background-color: #454343;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 20px;
+    font-size: 45px;
+}
+
+/* NAMA PENGGUNA */
+.profile-card h2 {
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.profile-card > p {
+    color: #777777;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* DETAIL PROFILE */
+.profile-details {
+    text-align: left;
+    border-top: 1px solid #eeeeee;
+}
+
+.detail {
+    padding: 18px 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.detail label {
+    display: block;
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.detail p {
+    font-size: 16px;
+    color: #222222;
+    font-weight: bold;
+}
+
+/* TOMBOL LOGOUT */
+.btn-logout {
+    width: 100%;
+    padding: 14px;
+
+    margin-top: 30px;
+
+    background-color: #704747;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #573535;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .profile-header h1 {
+        font-size: 25px;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .profile-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 35px;
+    }
+
+}

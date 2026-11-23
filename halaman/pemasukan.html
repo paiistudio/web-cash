@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Pemasukan</title>
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" aria-label="Buka atau tutup menu">
+        <span>☰</span>
+    </label>
+
+    <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+        <h2>DOFTECH CASH</h2>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="siswa.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Daftar Siswa</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pemasukan.html">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <span>Pemasukan</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pengeluaran.html">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <span>Pengeluaran</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <label for="menu-toggle" class="menu-overlay" aria-label="Tutup menu"></label>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <div>
+                <h1>Pemasukan</h1>
+                <p>Cek seluruh pemasukan kas.</p>
+            </div>
+
+            <div class="header-action">
+
+                <button
+                    class="add-btn"
+                    onclick="tampilkanForm()">
+                    + Tambah Pemasukan
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- FORM PEMASUKAN -->
+        <div
+            class="form-pemasukan"
+            id="formPemasukan">
+
+            <h2>Tambah Pemasukan</h2>
+
+
+            <!-- TANGGAL -->
+            <div class="form-group">
+
+                <label for="tanggal">
+                    Tanggal
+                </label>
+
+                <input
+                    type="date"
+                    id="tanggal">
+            </div>
+
+
+            <!-- NAMA SISWA -->
+            <div class="form-group">
+
+                <label for="namaSiswa">
+                    Nama Siswa
+                </label>
+
+                <select id="namaSiswa">
+
+                    <option value="">
+                        Pilih Nama Siswa
+                    </option>
+                </select>
+            </div>
+
+
+            <!-- CATATAN TAMBAHAN -->
+            <div class="form-group">
+                <label for="keterangan">
+                    Catatan Tambahan (Opsional)
+                </label>
+                <textarea
+                    id="keterangan"
+                    placeholder="Contoh: Pembayaran kas minggu ke-3"></textarea>
+            </div>
+
+
+            <!-- SUMBER -->
+            <div class="form-group">
+
+                <label for="sumber">
+                    Sumber Pemasukan
+                </label>
+
+                <select id="sumber">
+
+                    <option value="">
+                        Pilih Sumber Pemasukan
+                    </option>
+
+                    <option value="Kas Mingguan">
+                        Kas Mingguan
+                    </option>
+
+                    <option value="Kas Bulanan">
+                        Kas Bulanan
+                    </option>
+
+                    <option value="Usaha dana">
+                        Usaha dana
+                    </option>
+
+                    <option value="Lainnya">
+                        Lainnya
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- JUMLAH -->
+
+            <div class="form-group">
+
+                <label for="jumlah">
+                    Jumlah
+                </label>
+
+                <input
+                    type="number"
+                    id="jumlah"
+                    placeholder="Masukkan jumlah">
+
+            </div>
+
+
+            <!-- TOMBOL -->
+
+            <div class="form-action">
+
+                <button
+                    type="button"
+                    class="btn-batal"
+                    onclick="tutupForm()">
+
+                    Batal
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-simpan"
+                    onclick="simpanPemasukan()">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- RINGKASAN -->
+        <!-- ========================= -->
+
+        <div class="income-cards">
+
+
+            <!-- TOTAL PEMASUKAN -->
+
+            <div class="income-card">
+
+                <h3>
+                    Total Pemasukan
+                </h3>
+
+                <p id="totalPemasukan">
+                    Rp0
+                </p>
+
+            </div>
+
+
+            <!-- PEMASUKAN BULAN INI -->
+
+            <div class="income-card">
+
+                <h3>
+                    Pemasukan Bulan Ini
+                </h3>
+
+                <p id="pemasukanBulanini">
+                    Rp0
+                </p>
+
+            </div>
+
+
+            <!-- JUMLAH TRANSAKSI -->
+
+            <div class="income-card">
+
+                <h3>
+                    Jumlah Transaksi
+                </h3>
+
+                <p id="jumlahTransaksiPemasukan">
+                    0 Transaksi
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- SEARCH & FILTER -->
+        <!-- ========================= -->
+
+        <div class="filter-box">
+
+            <input
+                type="text"
+                id="cariPemasukan"
+                placeholder="🔍  Cari transaksi...">
+
+
+            <select id="filterBulanPemasukan">
+
+                <option value="">
+                    All Month
+                </option>
+
+                <option value="01">
+                    Januari
+                </option>
+
+                <option value="02">
+                    Februari
+                </option>
+
+                <option value="03">
+                    Maret
+                </option>
+
+                <option value="04">
+                    April
+                </option>
+
+                <option value="05">
+                    Mei
+                </option>
+
+                <option value="06">
+                    Juni
+                </option>
+
+                <option value="07">
+                    Juli
+                </option>
+
+                <option value="08">
+                    Agustus
+                </option>
+
+                <option value="09">
+                    September
+                </option>
+
+                <option value="10">
+                    Oktober
+                </option>
+
+                <option value="11">
+                    November
+                </option>
+
+                <option value="12">
+                    Desember
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- TABEL PEMASUKAN -->
+        <!-- ========================= -->
+
+        <div class="income-table">
+
+
+            <div class="income-table-header">
+
+                <h2>
+                    Riwayat Pemasukan
+                </h2>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Tanggal
+                        </th>
+
+                        <th>
+                            Nama Siswa
+                        </th>
+
+                        <th>
+                            Keterangan
+                        </th>
+
+                        <th>
+                            Sumber
+                        </th>
+
+                        <th>
+                            Jumlah
+                        </th>
+
+                        <th>
+                            Aksi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tabelPemasukan">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script src="../js/api.js"></script>
+    <script src="../js/pemasukan.js"></script>
+
+</body>
+
+</html>

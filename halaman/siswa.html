@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Daftar Siswa - Kas Kelas</title>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" aria-label="Buka atau tutup menu">
+        <span>☰</span>
+    </label>
+
+    <!--Side bar-->
+    <aside class="sidebar">
+        <h2>DOFTECH CASH</h2>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li><a href="siswa.html"><i class="fa-solid fa-users"></i><span>Daftar Siswa</span></a></li>
+                <li><a href="pemasukan.html"><i class="fa-solid fa-money-bill-trend-up"></i><span>Pemasukan</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-money-bill-transfer"></i><span>Pengeluaran</span></a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <label for="menu-toggle" class="menu-overlay" aria-label="Tutup menu"></label>
+
+    <!--Content-->
+
+    <main class="content">
+        <div class="header">
+            <div>
+                <h1>Daftar Siswa</h1>
+                <p>Kelola data siswa yang terdaftar di kelas.</p>
+            </div>
+
+            <div class="header-action">
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+
+        <!--DAFTAR SISWA-->
+        <div class="transactions">
+            <div class="transactions-header">
+                <h2>Data Siswa</h2>
+
+                <button class="add-btn" onclick="tampilkanForm()">
+                    + Tambah siswa
+                </button>
+            </div>
+
+            <div class="form-siswa" id="formSiswa">
+
+                <h3>Tambah Siswa</h3>
+
+                <label for="nama">Nama Siswa</label>
+                <input type="text" id="nama" placeholder="Masukkan nama siswa">
+
+
+                <label for="kelas">Kelas</label>
+                <input type="text" id="kelas" placeholder="CONTOH: XI PPLG 2">
+
+                <div class="form-action">
+                    <button class="batal-btn" onclick="sembunyikanForm()">
+                        Batal
+                    </button>
+
+                    <button class="simpan-btn" onclick="tambahsiswa()">
+                        Simpan
+                    </button>
+
+                </div>
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama siswa</th>
+                        <th>Kelas</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelSiswa"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/siswa.js"></script>
+</body>
+</html>

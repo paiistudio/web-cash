@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>website</title>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" aria-label="Buka atau tutup menu">
+        <span>☰</span>
+    </label>
+
+    <!--Side bar-->
+    <aside class="sidebar">
+        <h2>DOFTECH CASH</h2>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li><a href="halaman/siswa.html"><i class="fa-solid fa-users"></i><span>Daftar Siswa</span></a></li>
+                <li><a href="halaman/pemasukan.html"><i class="fa-solid fa-money-bill-trend-up"></i><span>Pemasukan</span></a></li>
+                <li><a href="halaman/pengeluaran.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Pengeluaran</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <label for="menu-toggle" class="menu-overlay" aria-label="Tutup menu"></label>
+
+    <!--Header-->
+    <main class="content">
+        <div class="header">
+            <div>
+                <h1>Halo!</h1>
+                <p>Yuk, cek pemasukan dan pengeluaran kas kelas.</p>
+            </div>
+
+            <div class="header-right">
+                <a href="halaman/profile.html" class="profile">
+                    <div class="profile-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Profile</strong>
+                    </div>
+                </a>
+
+                <a href="halaman/login.html" class="login-btn">
+                    Login
+                </a>
+            </div>
+        </div>
+
+        <!--ISI-->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Kas</h3>
+                <p id="totalKas">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Pemasukan</h3>
+                <p id="totalPemasukan">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Pengeluaran</h3>
+                <p id="totalPengeluaran">Rp0</p>
+            </div>
+        </div>
+
+        <!-- Transaksi -->
+        <div class="transactions">
+            <div class="transactions-header">
+                <h2>Transaksi terbaru</h2>
+                <button>Lihat semua</button>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Jenis</th>
+                    <th>Nominal</th>
+                </tr>
+
+                <tbody id="tabelTransaksi">
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

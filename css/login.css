@@ -1,0 +1,235 @@
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8D0D0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* CONTAINER LOGIN */
+.login-container {
+    width: 900px;
+    min-height: 550px;
+    background-color: white;
+
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* BAGIAN KIRI */
+.login-info {
+    width: 40%;
+    background-color: #454343;
+    color: white;
+
+    padding: 45px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.login-info h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.login-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #dddddd;
+}
+
+/* IKON WALLET */
+.login-icon {
+    margin-top: 50px;
+    font-size: 100px;
+    color: #ffffff;
+}
+
+/* BAGIAN FORM */
+.login-form-container {
+    width: 60%;
+    padding: 55px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* HEADER LOGIN */
+.login-header {
+    margin-bottom: 35px;
+}
+
+.login-header h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.login-header p {
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/* INPUT BOX */
+.input-box {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    padding: 0 15px;
+    height: 48px;
+
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: #765050;
+    box-shadow: 0 0 5px rgba(118, 80, 80, 0.2);
+}
+
+.input-box i {
+    color: #777777;
+    margin-right: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+    background: transparent;
+}
+
+/* REMEMBER ME */
+.form-options {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.form-options input {
+    margin-right: 5px;
+    accent-color: #765050;
+}
+
+/* TOMBOL LOGIN */
+.btn-login {
+    width: 100%;
+    height: 48px;
+
+    background-color: #704747;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #573535;
+}
+
+/* FOOTER */
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.login-footer p {
+    font-size: 13px;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.login-footer a {
+    text-decoration: none;
+    color: #704747;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE HP */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .login-info {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .login-info h1 {
+        font-size: 25px;
+    }
+
+    .login-icon {
+        font-size: 55px;
+        margin-top: 20px;
+    }
+
+    .login-form-container {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .login-header h2 {
+        font-size: 25px;
+    }
+}
